@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 // Connect to MongoDB
 const connectDb = async () => {
     try{
-        await mongoose.connect('mongodb+srv://milonchandro35:9gvhp1qBGCaqtj33@todo.q9my8.mongodb.net/?retryWrites=true&w=majority&appName=mndb')
+        await mongoose.connect('mongodb://localhost:27017')
         console.log('Connected to MongoDB');
     }
     catch(error){

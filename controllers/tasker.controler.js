@@ -10,7 +10,6 @@ const getAllTasks = async (req, res) => {
     catch(error){
         return res.status(500).json({error: "500 Internal Server Error"});
     }
-    res.send('Hello World!')
 }
 
 // create a task controller

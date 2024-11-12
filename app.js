@@ -7,6 +7,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Tasker Route
 const taskerRouter = require('./routes/tasker.route');
-app.use('/', taskerRouter);
+app.use('/task', taskerRouter);
+
+// district route
+const districtRouter = require('./routes/district.routes');
+app.use('/district', districtRouter);
 
 module.exports = app
