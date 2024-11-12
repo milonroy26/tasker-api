@@ -13,4 +13,8 @@ app.use('/task', taskerRouter);
 const districtRouter = require('./routes/district.routes');
 app.use('/district', districtRouter);
 
+// product route
+const productRouter = require('./routes/product.routes');
+app.use('/product', productRouter);
+
 module.exports = app
