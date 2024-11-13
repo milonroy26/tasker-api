@@ -14,7 +14,11 @@ const districtRouter = require('./routes/district.routes');
 app.use('/district', districtRouter);
 
 // product route
-const productRouter = require('./routes/product.routes');
-app.use('/product', productRouter);
+// const productRouter = require('./routes/product.routes');
+// app.use('/product', productRouter);
+
+// product admin route
+const productAdminRouter = require('./routes/admin_product.route');
+app.use('/admin/product', productAdminRouter);
 
 module.exports = app
