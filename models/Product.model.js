@@ -11,10 +11,6 @@ const productSchema = new Schema({
         type: String,
         required: false
     },
-    image_id: {
-        type: String,
-        required: false
-    },
     category_name: {
         type: String,
         required: true

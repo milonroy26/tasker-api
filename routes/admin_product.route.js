@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/create', async(req, res) => {
-
     // validate request body 
     const {error} = ProductValidator.create(req.body);
     if(error){
@@ -49,7 +48,7 @@ router.post('/create', async(req, res) => {
     // category exists or not
     let category;
     try{
-        category = await Category.findOne({_id: subCategory.category_id});
+        category = await Category.findOne({_id: subcategory.category_id});
     }
     catch(error){
         return res.status(500).json({error: '500 Internal Server Error'});
@@ -61,8 +60,7 @@ router.post('/create', async(req, res) => {
     // create product
     const createProduct = new Product({
         name: req.body.name,
-        image: "https://res.cloudinary.com/bdassistant/image/upload/w_1600/v1668603363/banners/web_cover_final-01_eench2.jpg",
-        image_id: "33333",
+        image: req.body.image,
         category_name: category.name,
         category_id: category._id,
         subcategory_name: subcategory.name,
@@ -89,7 +87,6 @@ router.post('/create', async(req, res) => {
             error: "500 Internal Server Error"
         })
     }
-
 })
 
 module.exports = router
