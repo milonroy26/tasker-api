@@ -9,11 +9,11 @@ const productSchema = new Schema({
     },
     image: {
         type: String,
-        required: true
+        required: false
     },
     image_id: {
         type: String,
-        required: true
+        required: false
     },
     category_name: {
         type: String,
